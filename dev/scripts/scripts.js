@@ -1,120 +1,97 @@
-$( document ).ready(function() {
+var userMenuClick = false;
+var videoModalOpen = false;
+var videoUrl = $('#video').attr('src');
 
-	// DESKTOP
-	$("#paragraphButton").on("click", function() {
-		console.log("paragraph button click");
-	    $("#paragraphButton img").css("display", "block");
-	    $("#sentenceButton img").css("display", "none");
+function checkSize(){
+    var bodyWidth = parseInt($("body").css("width"));
+    console.log('bodyWidth', bodyWidth);
+    if (bodyWidth <= 1000 ){
+    	$(".menu-trigger").removeClass('active');
+    	$(".menu-ul").removeClass('slideMenu');
+    } else {
+      console.log('le yay');
+      desktopMenu();
+    }
+}
+
+function desktopMenu() {
+	$(document).scroll(function(){
+		var top = $(document).scrollTop();
+		if(top<"600"){
+			userMenuClick = false;
+		};
+    if(top>"600" && !userMenuClick) {
+  	    //after you've scrolled 600 pixels...
+  		$(".menu-trigger").removeClass('active');
+  		$(".menu-ul").removeClass('slideMenu');
+		userMenuClick = false;
+    } else {
+  		$(".menu-trigger").addClass('active');
+  		$(".menu-ul").addClass('slideMenu');
+    }
 	});
+};
 
-	$("#sentenceButton").on("click", function() {
-	    $("#sentenceButton img").css("display", "block");
-	    $("#paragraphButton img").css("display", "none");
-	});
+(function menuSlide() {
+    $('.menu-trigger').on('click', function () {
+      $(this).toggleClass('active');
+      $('.menu-ul').toggleClass('slideMenu');
+      userMenuClick = !userMenuClick;
+    });
+}.call(this));
 
-	// SLIDER SELECT
-	$('.numberSlider').ionRangeSlider({
-	    min: 1,
-	    max: 6,
-	    from: 1
-	});
+function smoothScroll() {
+  $('a[rel="relativeanchor"]').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+    }); 
+};
 
-	// SET VARIABLE FOR SLIDER NUMBER
-	var sliderNumber;
+function openVideo() {
+  $('.play-button').on('click', function(e) {
+    e.stopPropagation();
+    $('#video').attr('src', videoUrl+'?&autoplay=1');
+    videoModalOpen = true;
+    console.log('open video');
+    $('#videoModal').fadeIn('slow');
+    $('#videoOverlay').addClass('video-overlay-dark');
+  })
+};
 
-	$('.numberSlider').on('change',function() {
-		sliderNumber = this.value;
-		console.log(this.value);
-	});
+function closeVideo() {
+  $('#videoOverlay').on('click', function(e) {
+    if (videoModalOpen) {
+    console.log('close video')
+    videoModalOpen = false;
+    $('#videoModal').fadeOut();
+    $('#videoOverlay').removeClass('video-overlay-dark');
+    };
+    //Assign video src to null to stop the video playing
+    $('#video').attr('src', '');
+  });
 
-	//FIND USER'S SENTENCE/PARAGRAPH SELECTION 
+};
 
-	$('.button').on('click',function() {
-		var userSelection = ($(this).find('input')[0]).value;
-		var textArray = text[userSelection];
-		// console.log(textArray);
-		// CHOOSE RANDOM NUMBERED ITEM FROM ARRAY
-
-		function getRandom(arr) {
-		  return arr[Math.floor(Math.random() * arr.length)];
-		}
-		function grabRandomItems(count, sourceArray) {
-		  var outputArray = [];
-		  while (count) {
-		    for(;;) {
-		      var item = getRandom(sourceArray);
-		      if (outputArray.indexOf(item) === -1) {
-		        outputArray.push(item);
-		        break;
-		      }
-		    }
-			count--;
-			}
-			return outputArray;
-			console.log(outputArray);
-		};	
-		var outputDisplay = grabRandomItems(sliderNumber, textArray);
-		var resultsToPage = outputDisplay.join('</br></br>');
-		// DISPLAY ON PAGE
-		console.log(grabRandomItems(sliderNumber, textArray))
-		$(".ipsumOutput").empty().append(`<p>${resultsToPage}</p>`);
-		});
-	
-
-	// MOBILE
-
-	// SET VARIABLE FOR INPUT NUMBER
-	var numberSelect;
-
-	// PLUS/MINUS SELECT
-	//FIND USER'S LENGTH SELECTION
-	$('.plus, .minus').on('click', function() {
-
-		// ASSIGN VALUE TO INPUT NUMBER VARIABLE
-		numberSelect = parseInt($('#numberSelect').val());
-		
-		// MAKE SURE VALUE ENTERED IS A NUMBER, IF NOT CHANGE TO 1
-		if (isNaN(numberSelect)) {
-			numberSelect = 1;
-		}
-
-		// INCREMENT NUMBER BASED ON ITS DATASET
-		numberSelect += parseInt($(this).data('increment'));
-
-		// IF THE NEXT NUMBER IS LESS THAN 1 OR GREATER THAN 6, STOP THE FUNCTION FROM RUNNING
-		if(numberSelect < 1 || numberSelect > 6) {
-			return; // STOP THE FUNCTION FROM RUNNING
-		}
-
-		$('#numberSelect').val(numberSelect);
-		console.log(numberSelect);
-	});
-
-	//FIND USER'S SENTENCE/PARAGRAPH SELECTION 
-
-	// var resultsToPost;
-
-	$('[name="selection"]').on('click',function() {
-		var textArray = text[this.value];
-		// CHOOSE RANDOM NUMBERED ITEM FROM ARRAY
-
-		for (var i = 0; i < numberSelect; i++) {
-		var arraySelection = Math.floor(Math.random() * (textArray.length) + 1);
-		var resultsToPost = (textArray[arraySelection])
-		// DISPLAY ON PAGE
-		// $(".ipsumOutput").append(`<p>${resultsToPost}</p>`);
-		// console.log(resultsToPost);	
-		}
-
-	});
-
-//DISPLAY WORDS ON PAGE
+$('#videoModal').on('click', function(e) {
+  e.stopPropagation();
 });
 
-// SHOW/HIDE ON WINDOW RESIZE
+$( document ).ready(function() {
 
-// var screenSize = $(window).width();
-// if (screenSize < 600px) {}
+  checkSize();
+  smoothScroll();
+  openVideo();
+  closeVideo();
+
+});
+
+$(window).resize(function() {
+	console.log('window resizing');
+	checkSize();	
+});
+
 
 //TWITTER SHARE BUTTON
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

@@ -1,12 +1,12 @@
 {
-  "name": "hygulptest",
+  "name": "trumpemipsum",
   "version": "1.0.0",
-  "description": "Learning Gulp",
+  "description": "Ipsum generator filled with Donald Trump quotes",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Luke",
+  "author": "Luke Diamantopoulos, Clare Prowse",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",

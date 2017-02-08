@@ -1,4 +1,3 @@
-
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -9,11 +8,11 @@ const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 gulp.task('styles', () => {
-    gulp.src('./dev/styles/**/*.scss')
+    gulp.src('dev/styles/**/*.scss')
     .pipe(sass().on ('error', sass.logError))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./public/styles'))
+    .pipe(gulp.dest('public/styles'))
     .pipe(reload({stream:true}));
     });
 gulp.task('scripts', () => {
@@ -32,7 +31,7 @@ gulp.task('browser-sync', () => {
         })
 });
 gulp.task('watch', () => {
-    gulp.watch('./dev/styles/**/*.scss', ['styles']);
+    gulp.watch('dev/styles/**/*.scss', ['styles']);
     gulp.watch('./dev/scripts/**/*.js', ['scripts']);
     gulp.watch('./*.html', reload);
     });

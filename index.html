@@ -2,108 +2,188 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Trumpem Ipsum</title>
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="public/styles/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="public/styles/ion.rangeSlider.skinFlat.css" />
-	<link rel="stylesheet" href="public/styles/style.css">
-    <!-- <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ > -->
+	<title>Mission Crit IV</title>
+    <link rel='shortcut icon' href='public/assets/favicon.ico' type='image/x-icon'/>
+    <link rel="stylesheet" type="text/css" href="public/styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<!-- FACEBOOK OPEN GRAPH TAGS -->
-	<meta property="og:url" content="http://www.trumpemipsum.com/"/>
+	<meta property="og:url" content="http://www.themissioncrit.com/"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:title" content="Trumpem Ipsum"/>
-	<meta property="og:description" content="Non-sensical filler text for your next design or development project."/>
+	<meta property="og:description" content="The most badass bicycle race in Northern California."/>
 	<meta property="fb:app_id" content="1650785235211767"/>
 	<meta property="og:image" content="http://www.trumpemipsum.com/public/images/trump-teaser-social.jpg"/>
 
 	<!-- TWITTER CARD TAGS -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site:id" content="@ProwseLikeMouse">
-	<meta name="twitter:title" content="Trumpem Ipsum">
-	<meta name="twitter:description" content="Non-sensical filler text for your next design or development project.">
+	<meta name="twitter:site:id" content="@MissionCrit">
+	<meta name="twitter:title" content="Mission Crit IV">
+	<meta name="twitter:description" content="The most badass bicycle race in Northern California.">
 	<meta name="twitter:image" content="http://www.trumpemipsum.com/public/images/trump-teaser-social.jpg">
 	<meta name="twitter:image:alt" content="Donald Trump Graphic">
+
+	<!-- Typekit Code -->
+	<script src="https://use.typekit.net/awg3yif.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
+	<header></header>
+	<div class="menu">
+		<a class='menu-trigger active'>
+		    <span></span>
+		</a>
+		<ul class="menu-ul slideMenu">
+			<li><a href="#home" rel="relativeanchor">Home</a></li>
+			<li><a href="#about-nav" rel="relativeanchor">About</a></li>
+			<li><a href="#race-nav" rel="relativeanchor">Race</a></li>
+			<!-- <li><a href="">Course</a></li> -->
+			<li><a href="#partners-nav" rel="relativeanchor">Sponsors</a></li>
+			<li><a href="#contact-nav" rel="relativeanchor">Contact</a></li>
+		</ul>
+	</div>
 	<div class="wrapper">
-		<section class="input">
-			<div class="container">
-				<div class="introTextBox">
-					<img src="public/images/title2.svg" alt="Trumpem Ipsum">
-
-					<!-- <h4>Ipsum generator</h4> -->
-					<p>Need some non-sensical filler text for your design or development project? Use these actual Donald Trump quotes!</p>
-				</div>
-
-				<div class="numberSliderBox">
-					<label for="numberSlider" class="typeLabel howMany">How Many?</label>
-					<input class="numberSlider" type="text" id="range" value="" name="range"/>
-				</div>
-
-				<h3 class="typeLabel">What Type?</h3>
-				<div class="typeButtons">
-					<div class="sentenceButton button">
-						<label for="sentence">
-							<img src="public/images/button.svg" alt="">
-							<span>Sentence</span>
-						</label>
-						<input id="sentenceButton" type="radio" name="selection" value="sentences" checked="checked">
-					</div>
-
-					<span id="dash">or</span>
-
-					<div class="paragraphButton button">
-						<label for="paragraph">
-							<img src="public/images/button-red.svg" alt="">
-							<span>Paragraph</span>
-						</label>
-						<input id="paragraphButton" type="radio" name="selection" value="paragraphs">
-					</div>
-				</div>
-<!-- 
-				<div class="numberSelectMobile">
-					<button class="minus" data-increment="-1"><span>-</span></button>
-					<input type="text" name="numberSelect" id="numberSelect" value="1">
-					<button class="plus" data-increment="1"><span>+</span></button>
-				</div>
-				<div class="typeSelectMobile">
-					<select name="" id="sentenceParagraphSelect">
-						<option value="1">sentence</option>
-						<option value="2">paragraph</option>
-					</select>
-				</div> -->
-<!-- 
-				<button class="copyButton button">
-					<img src="public/images/button-red.svg" alt="">
-					<span>Copy</span>
-				</button> -->
-				
-				<!-- <button class="copyButton">COPY<img src="" alt=""></button> -->
+		<section class="hero" id="home">
+			<div class="hero-splash-graphics">
+				<img alt="Mission Crit 4 logo and hero graphic" src="public/images/hero-logo-text-01.svg">
+				<!-- <div class="hero-title"><img src="public/assets/logo_type.svg"></div>
+				<div class="hero-img-logo">	
+					<img class="hero-img" src="public/images/hero-img-iv.png">
+					<div class="hero-logo"><img src="public/assets/mc_logo.svg"></div>
+				</div> -->				
+			</div>
+			<div class="hero-title-logo-m">
+				<div class="hero-logo-m"><img src="public/assets/mc_logo_sm.svg"></div>
+				<div class="hero-title-m"><img src="public/assets/m-logo_type.svg"></div>
+			</div>
+			<div class="hero-subline">
+				<p class="hero-location">San Francisco, California, USA</p>
+				<p class="hero-date">04.22.2017</p>
 			</div>
 		</section>
+		<section class="about-section" id="about-nav">
+			<a class="top-register-button" href="">
+				<div class="button red-button">Register</div>
+			</a>
+			<div class="about-info">
+				<div class="section-img"><img src="public/images/about-img-jo.png"></div>
+				<div class="info-text">
+					<h1>About</h1>
+					<p>Lorem ipsum the de vlaeminck schleck e3 prijs vlaanderen ullrich, criterium du dauphine riis once on your left hinault. Omnium omloop het volk, reilhan champs-elysees berg tiegemberg the kruisberg.</p>
+					<p>Mmmaiko mmmaiko chicane the Druber! Kleber HTFU criterium du dauphine, venga venga venga pantani hors categorie rochefort as the toto turns tati.</p>
+				</div>
+			</div>
+		</section>
+		<section class="video-section">
+			<div class="video-overlay" id="videoOverlay">
+				<div class="video-controls">
+					<h1 class="watch-text vid-control-element">Watch</h1>
+					<div id="videoPlayButton" class="vid-control-element play-button">
+						<div class="play-triangle"></div>
+					</div>
+					<h1 class="vid-control-element video-text">Video</h1>
+				</div>
+				<div class="m-video-controls">
+					<h1 class="watch-text vid-control-element">Watch Video</h1>
+					<div id="videoPlayButton" class="vid-control-element play-button">
+						<div class="play-triangle"></div>
+					</div>
+				</div>
+				<div class="video-title">
+					<p>Mission Crit 2016</p>
+				</div>
+				<div class="video-modal" id="videoModal">
+					<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/qEO3traELFQ" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
+		<section class="race-section" id="race-nav">
+			<div class="race-info">
+				<div class="info-text">
+					<h1>Race</h1>
+					<p>Lorem ipsum the de vlaeminck schleck e3 prijs vlaanderen ullrich, criterium du dauphine riis once on your left hinault. Omnium omloop het volk, reilhan champs-elysees berg tiegemberg the kruisberg.</p>
+				</div>
+				<div class="section-img"><img src="public/images/race-img.png"></div>
+			</div>
+			<div class="race-registration">
+				<a href="">
+					<div class="button red-button race-registration-section-button">Register</div>
+				</a>
+				<p>Registration opens March 1 and includes race entry, race t-shirt, and access to warm-up facilities on the day of the race.</p>
+			</div>
+			<!-- <div class="map-section" id="map-nav">
+				<div class="map-info">
+					<h1>Course Map</h1>
+					<p>Lorem ipsum the de vlaeminck schleck e3 prijs vlaanderen ullrich, criterium du dauphine riis once on your left hinault. Omnium omloop het volk, reilhan champs-elysees berg tiegemberg the kruisberg.</p>
+					<a href="">
+						<div class="button red-button">Download Map</div>
+					</a>
+				</div>
+			</div> -->
+		</section>
+		<section class="partners-section" id="partners-nav">
+			<h1>Partners</h1>
+			<div class="partner-info">
+				<ul class="partner-logo-links">
+					<li><a href="http://lowbicycles.com/" target="blank"><img class="low-logo" src="public/assets/low_logo.svg"></a></li>
+					<li><a href="http://www.bicyclelaw.com/" target="blank"><img  class="bl-logo" src="public/assets/bl_logo.svg"></a></li>
+				</ul>
+			</div>
+			<div class="partner-buttons">
+				<div class="partner-section-button">
+					<a href="mailto:themissioncrit@gmail.com?Subject=MC%20Sponsorship%20Inquiry" target="blank">
+						<div class="button red-button">Partner With Us</div>
+					</a>
+				</div>
+				<div class="partner-section-button partner-with-us-button">
+					<a href="">
+						<div class="button black-button">Download Partner Deck</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="contact-section" id="contact-nav">
+			<div class="contact-info">
+				<div class="section-img"><img src="public/images/contact-img-kym.png"></div>
+				<div class="info-text">
+					<h1>Contact</h1>
+					<p>Organizer James Grady</p>
+					<div class="james-contact-info">
+						<p>E. <a href="mailto:themissioncrit@gmail.com?" target="blank">themissioncrit@gmail.com</a></p>
+						<p>T. 480-321-9694</p>
+					</div>
+					<form action="http://www.focuspocus.io/magic/themissioncrit@gmail.com" method="POST" class="contact-form" autocomplete="on" name="contactForm">
+						<label for="nameInput">Name</label>
+						<input type="text" name="name-input" id="nameInput">
+						<label for="emailInput">Email</label>
+						<input type="text" name="email-input" id="emailInput">
+						<textarea name="contact-message" cols="30" rows="10" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder= 'Message'"></textarea>
+						<input class="contact-form-submit" id="submit-button" type='submit' value='submit' />
+					</form>
 
-		<section class="output">
-			<div class="trumpImage">
-				<img src="public/images/trump.svg" alt="">
+
+					<div class="contact-social">
+						<a href="http://www.facebook.com/themissioncrit/" target="blank"><img src="public/assets/fb_icon.svg"></a>
+						<a href="http://instagram.com/missioncrit" target="blank"><img src="public/assets/ig_icon.svg"></a>
+						<a href="http://twitter.com/missioncrit" target="blank"><img src="public/assets/tw_icon.svg"></a>
+					</div>
+				</div>
 			</div>
-			<div class="ipsumOutput">
-				<img class="bestWordsFiller" src="public/images/best_words-02.svg" alt="">
-			</div>
-			<div class="ipsumOutput ipsumOutputMobile">
-				<img class="bestWordsFiller" src="public/images/best_words-02.svg" alt="">
-			</div>
+			<!-- <div id="contactThanksModal" class="thank-you-message-modal">
+				<p>Thank You!</p>
+				<p>We'll get back to you soon.</p>
+			</div> -->
 		</section>
 	</div>
-		<footer>
-			<div class="container">
-				<p>Brought to you by <a href="http://lukediamantopoulos.com">@diamantopouls</a> and <a href="http://www.prowselikemouse.com">@prowselikemouse</a>
-			</div>
-		</footer>
+	<footer>
+		<div class="footer-credits">
+			<p>Photographs by <a href="http://www.jasonsellers.tumblr.com">@fwdbound</a>
+			<p>Website designed and developed by <a href="http://www.prowselikemouse.com">@prowselikemouse</a>
+		</div>
+		<div class="footer-logo"><img src="public/assets/mc_logo_sm.svg"></div>
+	</footer>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="public/scripts/ion.rangeSlider.min.js"></script>
 	<script src="public/scripts/scripts.js"></script>
 
 </body>
