@@ -1,12 +1,12 @@
 {
-  "name": "trumpemipsum",
+  "name": "missioncritiv",
   "version": "1.0.0",
-  "description": "Ipsum generator filled with Donald Trump quotes",
-  "main": "script.js",
+  "description": "Website for Mission Crit 4",
+  "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Luke Diamantopoulos, Clare Prowse",
+  "author": "Clare Prowse",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prowselikemouse/trumpemipsum.git"
+    "url": "git+https://github.com/prowselikemouse/missioncritiv.git"
   },
   "bugs": {
-    "url": "https://github.com/prowselikemouse/trumpemipsum/issues"
+    "url": "https://github.com/prowselikemouse/missioncritiv/issues"
   },
-  "homepage": "https://github.com/prowselikemouse/trumpemipsum#readme"
+  "homepage": "https://github.com/prowselikemouse/missioncritiv#readme"
 }
