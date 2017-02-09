@@ -1,19 +1,14 @@
 // @import compass
 
+@font-face {font-family: Avenir Next ;
+    src:url("../fonts/AvenirNext-Heavy.otf");
+}
 $mcRed: #ff1733;
 $lightBlue: #00a7df;
 $lightRed: #EF5362;
 $lightBlack: #141414;
 $titleFont: 'AvenirNext-Heavy', sans-serif;
 $bodyFont: "futura-pt",sans-serif;
-
-@font-face {font-family: Engcomica;
-    src:url("../fonts/Engcomica.otf");
-}
-
-@font-face {font-family: Avenir Next ;
-    src:url("../fonts/AvenirNext-Heavy.otf");
-}
 
 html {
   height: 100%;
@@ -123,6 +118,7 @@ section {
 	}
 	@media (max-width:1000px) {
 		width: 100%;
+		font-size: 2.4rem;
 	}
 	ul {
 		background-color: white;
@@ -138,13 +134,15 @@ section {
 		margin: 0;
 		z-index: 90;
 		@media (max-width: 1000px) {
-			background-color: rgba(255, 255, 255, 0.95);
+			background-color: rgba(255, 255, 255, 0.97);
 			flex-direction: column;
 			width: 100%;
-			padding: 3rem 0;
+			padding: 0 1.6rem;
 			left: 0;
-			top: -250px;
-			height: auto;
+			top: -1025px;
+			height: 100vh;
+			align-items: flex-end;
+			justify-content: flex-end;
 		}
 	}
 	li {
@@ -155,6 +153,16 @@ section {
 	}
 	@media (max-width: 1000px) {
 		top: 0;
+	}
+}
+
+.m-visible {
+	margin: 1rem 0 1.6rem;
+	@media (min-width: 1000px) {
+		display: none;
+	}
+	a {
+		width: 40px;
 	}
 }
 

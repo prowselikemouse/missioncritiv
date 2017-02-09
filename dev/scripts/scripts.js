@@ -99,10 +99,11 @@ $(window).resize(function() {
 //FACEBOOK SHARE BUTTON
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '1650785235211767',
+      appId      : '1212124842175466',
       xfbml      : true,
-      version    : 'v2.7'
+      version    : 'v2.8'
     });
+    FB.AppEvents.logPageView();
   };
 
   (function(d, s, id){
