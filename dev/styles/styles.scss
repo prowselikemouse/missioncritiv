@@ -686,6 +686,9 @@ section {
 .partner-buttons {
 	position: absolute;
 	bottom: 80px;
+	@media (max-width: 1000px) {
+		bottom: 0;
+	}
 }
 
 .partner-section-button {
