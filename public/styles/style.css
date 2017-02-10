@@ -591,6 +591,9 @@ section p {
 .partner-buttons {
   position: absolute;
   bottom: 80px; }
+  @media (max-width: 1000px) {
+    .partner-buttons {
+      bottom: 0; } }
 
 .partner-section-button {
   margin-bottom: 20px; }
@@ -637,6 +640,8 @@ section p {
     outline: none;
     background-color: transparent;
     border: 1px solid white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     margin-bottom: 6px;
     font-size: 16px;
     padding: 2px 4px; }

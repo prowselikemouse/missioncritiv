@@ -6,12 +6,24 @@ function checkSize(){
     var bodyWidth = parseInt($("body").css("width"));
     console.log('bodyWidth', bodyWidth);
     if (bodyWidth <= 1000 ){
-    	$(".menu-trigger").removeClass('active');
-    	$(".menu-ul").removeClass('slideMenu');
+    	mobileMenu();
+      hideMenuAfterUse();
     } else {
       console.log('le yay');
       desktopMenu();
     }
+}
+
+function mobileMenu() {
+  $(".menu-trigger").removeClass('active');
+  $(".menu-ul").removeClass('slideMenu');
+}
+
+function hideMenuAfterUse() {
+  $(".menu-item").on('click', function(){
+    console.log('hide that menu boo');
+    $(".menu-ul").removeClass('slideMenu');
+  })
 }
 
 function desktopMenu() {
@@ -24,7 +36,7 @@ function desktopMenu() {
   	    //after you've scrolled 600 pixels...
   		$(".menu-trigger").removeClass('active');
   		$(".menu-ul").removeClass('slideMenu');
-		userMenuClick = false;
+  		userMenuClick = false;
     } else {
   		$(".menu-trigger").addClass('active');
   		$(".menu-ul").addClass('slideMenu');
