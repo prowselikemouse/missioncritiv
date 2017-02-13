@@ -643,6 +643,7 @@ section p {
     border: 1px solid white;
     -webkit-appearance: none;
     -moz-appearance: none;
+    border-radius: 0%;
     margin-bottom: 6px;
     font-size: 16px;
     padding: 2px 4px; }
