@@ -730,7 +730,9 @@ footer {
   color: white; }
 
 .footer-logo {
-  width: 30px; }
+  width: 30px;
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
 
 .message-sent-section {
   background-color: #141414;
