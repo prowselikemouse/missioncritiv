@@ -111,7 +111,7 @@ section p {
         align-items: center;
     padding-right: 24px;
     padding-left: 84px;
-    position: relative;
+    position: absolute;
     left: -600px;
     margin: 0;
     z-index: 90; }
@@ -121,7 +121,8 @@ section p {
         -ms-flex-direction: column;
             flex-direction: column;
         width: 100%;
-        padding: 0 1.6rem;
+        padding-left: 0;
+        padding-right: 0;
         left: 0;
         top: -1025px;
         height: 100vh;
@@ -130,7 +131,7 @@ section p {
         -ms-flex-pack: end;
             justify-content: flex-end; } }
   .menu li {
-    margin-right: 20px; }
+    margin-right: 35px; }
   .menu a {
     color: #141414; }
   @media (max-width: 1000px) {
