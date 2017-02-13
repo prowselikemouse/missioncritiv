@@ -738,6 +738,9 @@ footer {
   background-color: #141414;
   color: white;
   position: relative; }
+  @media (max-width: 1000px) {
+    .message-sent-section {
+      height: 100vh; } }
 
 .message-sent-info {
   width: 100%;
@@ -745,6 +748,27 @@ footer {
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row; }
+  @media (max-width: 1000px) {
+    .message-sent-info .info-text {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: center;
+          align-items: center; }
+      .message-sent-info .info-text h1 {
+        text-align: center; } }
+
+.m-message-logo {
+  display: none;
+  margin: 0 auto;
+  max-width: 300px;
+  min-width: 200px;
+  width: 60%;
+  margin-bottom: 20px; }
+  @media (max-width: 1000px) {
+    .m-message-logo {
+      display: block; } }
 
 .mc-home-button {
   margin-top: 20px; }

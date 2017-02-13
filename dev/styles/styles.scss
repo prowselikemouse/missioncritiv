@@ -333,7 +333,6 @@ section {
 	width: 60%;
 	@media (min-width: 1000px) {
 		display: none;
-
 	}
 }
 
@@ -844,12 +843,37 @@ footer {
 	background-color: $lightBlack;
 	color: white;
 	position: relative;
+	@media (max-width: 1000px) {
+		height: 100vh;
+	}
 }
 
 .message-sent-info {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	.info-text {
+		@media (max-width: 1000px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h1 {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.m-message-logo {
+	display: none;
+	margin: 0 auto;
+	max-width: 300px;
+	min-width: 200px;
+	width: 60%;
+	margin-bottom: 20px;
+	@media (max-width: 1000px) {
+		display: block;
+	}
 }
 
 .mc-home-button {
