@@ -343,6 +343,7 @@ section p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100%;
   position: relative;
   color: white;
   display: -ms-flexbox;
