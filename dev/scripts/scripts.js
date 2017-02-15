@@ -1,6 +1,7 @@
 var userMenuClick = false;
 var videoModalOpen = false;
 var videoUrl = $('#video').attr('src');
+var isFirefox = typeof InstallTrigger !== 'undefined';
 
 function checkSize(){
     var bodyWidth = parseInt($("body").css("width"));
@@ -12,6 +13,13 @@ function checkSize(){
       console.log('le yay');
       desktopMenu();
     }
+}
+
+function firefoxFix () {
+  console.log('from firefoxFix');
+  if (isFirefox) {
+    $(".video-section").css('display', 'none');
+  }
 }
 
 function mobileMenu() {
@@ -96,6 +104,7 @@ $( document ).ready(function() {
   smoothScroll();
   openVideo();
   closeVideo();
+  firefoxFix();
 
 });
 
