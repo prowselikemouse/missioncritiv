@@ -389,6 +389,9 @@ section {
 	color: white;
 	margin-top: 750px;
 	position: relative;
+	.info-text p {
+		padding-right: 20px;
+	}
 	@media (max-width: 1000px) {
 		margin-top: 0;
 	}

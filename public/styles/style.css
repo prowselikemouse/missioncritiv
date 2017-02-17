@@ -315,6 +315,8 @@ section p {
   color: white;
   margin-top: 750px;
   position: relative; }
+  .about-section .info-text p {
+    padding-right: 20px; }
   @media (max-width: 1000px) {
     .about-section {
       margin-top: 0; } }
