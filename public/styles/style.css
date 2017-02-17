@@ -31,6 +31,9 @@ a {
     .wrapper {
       width: 100%; } }
 
+p {
+  font-weight: 100; }
+
 section h1 {
   font-family: "AvenirNext-Heavy", Helvetica, sans-serif;
   text-transform: uppercase;
@@ -50,6 +53,7 @@ section p {
 
 .button {
   font-family: "futura-pt", sans-serif;
+  font-weight: 100;
   font-size: 24px;
   letter-spacing: 0.20px;
   text-transform: uppercase;
@@ -84,8 +88,8 @@ section p {
 
 .menu {
   font-family: "futura-pt", sans-serif;
+  font-weight: 100;
   text-transform: uppercase;
-  font-weight: 800;
   font-size: 1.4rem;
   display: -ms-flexbox;
   display: flex;
@@ -497,6 +501,10 @@ section p {
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row; }
+  .race-info .info-text p {
+    font-weight: 100; }
+  .race-info .info-text span {
+    font-weight: 500; }
   @media (max-width: 1000px) {
     .race-info .info-text {
       padding-bottom: 40px; } }
@@ -624,11 +632,13 @@ section p {
   flex-direction: column;
   max-width: 350px;
   font-family: "futura-pt", sans-serif;
+  font-weight: 100;
   font-size: 18px; }
   .contact-form input,
   .contact-form textarea,
   .contact-form select {
     font-family: "futura-pt", sans-serif;
+    font-weight: 100;
     color: white;
     outline: none;
     background-color: transparent;
@@ -642,6 +652,7 @@ section p {
   .contact-form input:focus {
     color: white;
     font-size: 18px;
+    font-weight: 100;
     padding: 2px 4px; }
   .contact-form textarea {
     resize: none;
@@ -651,36 +662,41 @@ section p {
     color: white;
     opacity: 1;
     font-size: 18px;
+    font-weight: 100;
     padding: 2px 4px;
     margin: 0; }
   .contact-form textarea::-moz-placeholder {
     color: white;
     opacity: 1;
     font-size: 18px;
+    font-weight: 100;
     padding: 2px 4px;
     margin: 0; }
   .contact-form textarea:-ms-input-placeholder {
     color: white;
     opacity: 1;
     font-size: 18px;
+    font-weight: 100;
     padding: 2px 4px;
     margin: 0; }
   .contact-form textarea::placeholder {
     color: white;
     opacity: 1;
     font-size: 18px;
+    font-weight: 100;
     padding: 2px 4px;
     margin: 0; }
   .contact-form textarea:focus {
     color: white;
     font-size: 18px;
+    font-weight: 100;
     padding: 2px 4px; }
   .contact-form input[type=submit] {
     width: 100px;
     background-color: white;
     color: #141414;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 100;
     text-transform: uppercase;
     padding: 4px 10px;
     margin-top: 10px;

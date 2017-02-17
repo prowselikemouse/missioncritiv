@@ -48,6 +48,10 @@ a {
 	}
 }
 
+p {
+	font-weight: 100;
+}
+
 section {
 	h1 {
 		font-family: $titleFont;
@@ -69,6 +73,7 @@ section {
 
 .button {
 	font-family: $bodyFont;
+	font-weight: 100;
 	font-size: 24px;
 	letter-spacing: 0.20px;
 	text-transform: uppercase;
@@ -111,8 +116,8 @@ section {
 
 .menu {
 	font-family: $bodyFont;
+	font-weight: 100;
 	text-transform: uppercase;
-	font-weight: 800;
 	font-size: 1.4rem;
 	display: flex;
 	align-content: center;
@@ -583,6 +588,12 @@ section {
 	display: flex;
 	flex-direction: row;
 	.info-text {
+		p {
+			font-weight: 100;
+		}
+		span {
+			font-weight: 500;
+		}
 		@media (max-width: 1000px) {
 			padding-bottom: 40px;
 		}
@@ -740,11 +751,13 @@ section {
 	flex-direction: column;
 	max-width: 350px;
 	font-family: $bodyFont;
+	font-weight: 100;
 	font-size: 18px;
 	input, 
 	textarea,
 	select {
 		font-family: $bodyFont;
+		font-weight: 100;
 		color: white;
 		outline: none;
 		background-color: transparent;
@@ -759,6 +772,7 @@ section {
 	input:focus {
 		color: white;
 		font-size: 18px;
+		font-weight: 100;
 		padding: 2px 4px;
 	}
 	textarea {
@@ -770,12 +784,14 @@ section {
 		color: white;
 		opacity: 1;
 		font-size: 18px;
+		font-weight: 100;
 		padding: 2px 4px;
 		margin: 0;
 	}
 	textarea:focus {
 		color: white;
 		font-size: 18px;
+		font-weight: 100;
 		padding: 2px 4px;
 	}
 	input[type=submit] {
@@ -783,7 +799,7 @@ section {
 		background-color: white;
 		color: $lightBlack;
 		font-size: 18px;
-		font-weight: 600;
+		font-weight: 100;
 		text-transform: uppercase;
 		padding: 4px 10px;
 		margin-top: 10px;
