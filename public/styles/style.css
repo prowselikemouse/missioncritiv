@@ -328,8 +328,8 @@ section p {
 .top-register-button {
   position: absolute;
   top: -25px;
-  left: 50%;
-  right: 50%;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   text-align: center;
   display: -ms-flexbox;
