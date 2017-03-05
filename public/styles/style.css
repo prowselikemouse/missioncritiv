@@ -522,7 +522,7 @@ section p {
   text-align: center; }
   .race-registration p {
     margin: 0;
-    padding: 0 30px 30px;
+    padding: 0 40px 30px;
     text-align: left; }
   @media (max-width: 1000px) {
     .race-registration {
