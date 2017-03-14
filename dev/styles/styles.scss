@@ -653,6 +653,9 @@ section {
 }
 
 .partner-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	margin-bottom: 40px;
 }
 
@@ -662,7 +665,7 @@ section {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	align-content: flex-start;
 	align-items: flex-start;
 	// margin-top: 100px;
