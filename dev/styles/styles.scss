@@ -653,47 +653,85 @@ section {
 }
 
 .partner-info {
+	margin-bottom: 40px;
+}
+
+.sponsors,
+.partners,
+.friends {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	// justify-content: center;
-	// align-content: center;
-	// align-items: center;
+	justify-content: center;
+	align-content: flex-start;
+	align-items: flex-start;
 	// margin-top: 100px;
-	padding: 50px 0;
+	margin: 0 auto;
+	padding: 10px 0;
 	@media (max-width: 1000px) {
 		margin-top: 0;
 		padding: 0;
 	}
 }
 
+.partner-type {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px 20px 10px 0;
+}
+
 .partner-logo-links {
 	display: flex;
 	align-content: center;
-	// align-items: center;
+	justify-content: center;
+	align-items: center;
 	padding: 0;
 	list-style: none;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-	.partner-logo-link {
-		padding: 20px;
-		background-color: rgba(255, 255, 255, 0.2);
-		width: 200px;
-		height: 200px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 10px 20px 10px 0;
-	}
 
-.low-logo {
+.logo-link {
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.sponsor-logo-link {
+	width: 200px;
+	height: 200px;
+}
+
+.partner-logo-link {
+	width: 150px;
+	height: 150px;
+	padding: 18px;
+}
+
+.friend-logo-link {
+	width: 100px;
+	height: 100px;
+	padding: 14px;
+}
+
+.partner-title {
+	margin: 6px 0;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	text-align: center;
+}
+
+.partner-logo {
 	width: 100%;
 }
 
-.bl-logo {
-	width: 100%;
-}
 
 // .partner-buttons {
 // 	position: absolute;
