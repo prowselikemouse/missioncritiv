@@ -535,6 +535,10 @@ section p {
   bottom: 25px;
   margin: 0 auto; }
 
+.map-section {
+  position: relative;
+  background-color: white; }
+
 .partners-section {
   background-image: url("../images/sponsor-img-3.jpg");
   background-size: cover;

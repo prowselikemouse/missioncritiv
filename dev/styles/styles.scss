@@ -308,10 +308,6 @@ section {
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: contain;
-	// display: flex;
-	// flex-direction: row;
-	// align-items: baseline;
-	// position: relative;
 	width: 100%;
 	@media (max-width: 1000px) {
 		display: none;
@@ -627,6 +623,17 @@ section {
 	position: relative;
 	bottom: 25px;
 	margin: 0 auto;
+}
+
+
+// +++++++++++++++++++++++++++++++
+// Map Styles
+// +++++++++++++++++++++++++++++++
+
+
+.map-section {
+	position: relative;
+	background-color: white;
 }
 
 // +++++++++++++++++++++++++++++++
